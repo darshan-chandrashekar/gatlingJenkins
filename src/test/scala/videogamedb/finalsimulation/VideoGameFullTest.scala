@@ -5,9 +5,17 @@ import io.gatling.http.Predef._
 
 class VideoGameFullTest extends Simulation {
 
-  val httpProtocol = http.baseUrl("https://videogamedb.uk/api")
+
+
+//  For Travis CI use
+  val httpProtocol = http.baseUrl("http://video-game-db.eu-west-2.elasticbeanstalk.com/app/")
     .acceptHeader("application/json")
     .contentTypeHeader("application/json")
+
+ //For Local use
+/*  val httpProtocol = http.baseUrl("https://videogamedb.uk/api")
+    .acceptHeader("application/json")
+    .contentTypeHeader("application/json")*/
 
   // ** VARIABLES FOR FEEDERS ** /
   // runtime variables
